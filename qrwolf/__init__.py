@@ -9,4 +9,4 @@ elif app.config['ENV'] == 'testing':
 else:
     app.config.from_object('config.DevelopmentConfig')
 
-from app import views
+from qrwolf import views

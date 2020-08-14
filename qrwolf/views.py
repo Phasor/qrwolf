@@ -1,4 +1,4 @@
-from app import app
+from qrwolf import app
 from datetime import datetime
 from flask import render_template, request, redirect, session
 from flask_mail import Mail, Message
