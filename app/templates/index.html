@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block description %} {{description}} {% endblock %}
+{% block title %} {{title}} {% endblock %}
+
+{% block main %}
+
+
+
+<div class"container my-container">
+    <div class="row my-row">
+        <div class="col-4 my-col"></div>
+        <div class="col-4 my-col">
+            <h1>Make a free QR code now</h1>
+            <form action="/qr-code" method="POST">
+                <input class="form-control" type="text" name="url" placeholder="www.website.com" required>
+
+                <button type="submit" class="btn btn-primary my-btn">Create QR Code!</button>
+
+            </form>
+        </div>
+
+        <div class="col-4 my-col">
+
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+

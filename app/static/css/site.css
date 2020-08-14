@@ -1,0 +1,47 @@
+/* 
+
+.my-container {
+    
+        border: 3px solid blue;
+    
+}
+
+.my-row {
+    
+        border: 3px solid red;
+    
+}
+
+.my-col {
+    
+        border: 3px dotted green;
+    
+}
+
+*/
+
+.my-btn{
+    margin-top: 10px;
+}
+
+.banner {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    max-width: 30%;
+}
+
+.my-footer{
+    text-align: right;
+}
+
+html, head, title, body {
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    font-size:1em;
+}
+

@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block description %} {{description}} {% endblock %}
+{% block title %} {{title}} {% endblock %}
+
+ {% block main %}
+
+    <div class"container my-container">
+        <div class="row justify-content-center my-row">
+
+            <div class="col-xs-12 text-center col-md-3 my-col"></div>
+            <div class="col-xs-12 text-center col-md-3 my-col">
+                <img class="code" src="{{query_url}}" alt="QR Code" />
+
+                <div class="dropdown show">
+                    <a class="btn btn-secondary dropdown-toggle" href="{{query_url}}" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Change Code Size
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href=" {{ url_for('result', code_size='small') }} ">Small</a>
+                        <a class="dropdown-item" href=" {{ url_for('result', code_size='medium') }} ">Medium</a>
+                        <a class="dropdown-item" href=" {{ url_for('result', code_size='large') }} ">Large</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-xs-12 justify-content-center col-md-3 my-auto my-col">
+                <h6>Send this QR code to your email</h6>
+                <form action="/success" method="POST">
+                    <input class="form-control" type="email" name="email_address" placeholder="jim@gmail.com" required>
+
+                    {% if not show_link %}
+                    <button type="submit" class="btn btn-primary my-btn">Send Email</button>
+                    {% elif show_link %}
+                    <a class="btn btn-primary my-btn" href="/" role="button">Make Another Code</a>
+                    {% endif %}
+
+                </form>
+                <p style="text-align: center; margin-top: 20px;">{{status_msg}}</p>
+            </div>
+            <div class="col-xs-12 text-center col-md-3 my-col"></div>
+        </div>
+    </div>
+
+{% endblock %}
