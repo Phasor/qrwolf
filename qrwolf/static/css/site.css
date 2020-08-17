@@ -28,7 +28,8 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 0px;
-    max-width: 30%;
+    max-width: 50%;
+    
 }
 
 .my-footer{
@@ -41,6 +42,10 @@ html, head, title, body {
 }
 
 h1 {
+    font-size:2em;
+}
+
+h2 {
     font-size:1em;
 }
 

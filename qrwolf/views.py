@@ -10,14 +10,14 @@ def home():
 
         req = request.form
         query_url = req["url"]
-        print(query_url)
+        #print(query_url)
         #return redirect(
         #'result.html',
         #query_url)
 
 
-    return render_template('index.html',title='Free QR Code Generator: create a QR code now', 
-           description='Use our free QR code generator to drive more traffic to your site.')
+    return render_template('index.html',title='QR Code Scanner: create a QR code now', 
+           description='Use our free QR code generator to drive traffic to your website, send SMS, emails and more.')
 
 @app.route('/about')
 def about():
@@ -25,11 +25,11 @@ def about():
 
 @app.route('/contact')
 def contact():
-    return render_template('contact.html', title ="QuikQR: Contact us")
+    return render_template('contact.html', title ="Contact QR Wolf")
 
 @app.route('/how-to-use-qr-codes')
 def tutorial():
-    return render_template('tutorial.html')
+    return render_template('tutorial.html', title="QR Code FAQ")
 
 
 @app.route('/qr-code', methods=["GET","POST"])

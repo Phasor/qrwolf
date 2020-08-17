@@ -27,34 +27,25 @@
                         </div>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card-header" id="headingTwo">
-                        <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                What does QR stand for?
-                            </button>
-                        </h5>
-                    </div>
-                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                        <div class="card-body">
-                            Quick response.
-                        </div>
-                    </div>
-                </div>
 
                 <div class="card">
                     <div class="card-header" id="headingThree">
                         <h5 class="mb-0">
                             <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                How do I scan a QR code on an iphone?
+                                How do I scan a QR code?
                             </button>
                         </h5>
                     </div>
                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                         <div class="card-body">
-                            iPhone: with IOS 11 onwards, you can simply open your camera app and point it at the QR code. A popup will appear which you then need to click.
-
-                            Android: try using Google Lens or your camera app. If not, take a look in the Play store for a QR code app with good reviews.
+                            <ul>
+                                <li>
+                                    iPhone: with IOS 11 onwards, you have an in built QR code scanner. Simply open your camera app and point it at the QR code. A popup will appear which you then need to click.
+                                </li>
+                                <li>   
+                                    Android: try using Google Lens or your camera app. If not, take a look in the Play store for a QR code app with good reviews.
+                                </li> 
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -105,6 +96,36 @@
                                 <li>Prompt a user to call a certain phone number, email you or send an SMS a pre-populated phone number </li>
                                 <li>Show a user a location on a Google map </li>
                             </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="headingSeven">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                How do I show a map dropped pin with a QR code?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+                        <div class="card-body">
+                            You can <a href " {{ url_for('home') }}"> make a map from a QR code </a> by going to QR Wolf and selecting &quot;map&quot; from the radio buttons, entering in the lattitude and longitude of the pin (use google maps to find these) and then hitting &quot;Create Code&quot;. 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="headingEight">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                How do I use a QR code to make a phone call?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
+                        <div class="card-body">
+                            You can make a cell phone <a href " {{ url_for('home') }}"> call a phone number with a QR code </a> by going to QR Wolf and selecting &quot;phone&quot; from the radio buttons, entering in the phone number to call (no spaces) and then hitting &quot;Create Code&quot;. 
                         </div>
                     </div>
                 </div>

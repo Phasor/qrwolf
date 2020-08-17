@@ -5,15 +5,12 @@
 
 {% block main %}
 
-
-
 <div class"container my-container">
     <div class="row my-row">
         <div class="col-6 my-col">
-            <h1>Make a free QR code:</h1>
-            <form action="/qr-code" method="POST">
+            <h1>Use our free QR code scanner.</h1>
 
-<!--    test  -->
+            <form action="/qr-code" method="POST">
                 
                 <input type="radio" value="website" id="website" name="radiogrp" checked="checked"  />
                 <label for="URL">URL</label>
@@ -33,36 +30,34 @@
                 <label for="Map">Map</label>
                 
                 <script>
-                var url = document.getElementById("website");
-                var phone = document.getElementById("Phone");
-                var email = document.getElementById("Email");
-                var sms = document.getElementById("sms");
-                var geo = document.getElementById("geo");
-                
-                url.onclick = function() {
-                    document.getElementById("requestcode").placeholder = "www.website.com";
-                
-                }
-                
-                phone.onclick = function() {
-                    document.getElementById("requestcode").placeholder = "Full international number. No spaces";
-                }
+                    var url = document.getElementById("website");
+                    var phone = document.getElementById("Phone");
+                    var email = document.getElementById("Email");
+                    var sms = document.getElementById("sms");
+                    var geo = document.getElementById("geo");
+                    
+                    url.onclick = function() {
+                        document.getElementById("requestcode").placeholder = "www.website.com";
+                    
+                    }
+                    
+                    phone.onclick = function() {
+                        document.getElementById("requestcode").placeholder = "Full international number. No spaces";
+                    }
 
-                email.onclick = function() {
-                    document.getElementById("requestcode").placeholder = "recipient@mail.com";
-                }
+                    email.onclick = function() {
+                        document.getElementById("requestcode").placeholder = "recipient@mail.com";
+                    }
 
-                sms.onclick = function() {
-                    document.getElementById("requestcode").placeholder = "Full international number. No spaces";
-                }
+                    sms.onclick = function() {
+                        document.getElementById("requestcode").placeholder = "Full international number. No spaces";
+                    }
 
-                geo.onclick = function() {
-                    document.getElementById("requestcode").placeholder = "Latt,Long no spaces e.g. 40.742081,-74.004480";
-                }
-
+                    geo.onclick = function() {
+                        document.getElementById("requestcode").placeholder = "Latt,Long no spaces e.g. 40.742081,-74.004480";
+                    }
                 </script>
 
-<!--    test  -->
                 <input class="form-control" id="requestcode" type="text" name="url" placeholder="www.website.com" required>
 
                 <button type="submit" class="btn btn-primary my-btn">Create Code!</button>
@@ -70,6 +65,38 @@
             </form>
         </div>
     </div>
+<br>
+    <div class="row my-row">
+        <div class="col-6 my-col">
+
+            <div class="card">
+                <div class="card-header">
+                  <strong>Did You Know?</strong> - Types of QR Codes
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li class="card-text">
+                            <strong>URL</strong>: send a brower to any URL such as website, social media page, product description etc.
+                        </li>
+                        <li class="card-text">
+                            <strong>Phone:</strong> scan a QR code and the user's cell phone will prompt them to call a pre-set phone number.
+                        </li>
+                        <li class="card-text">
+                            <strong>Email:</strong> scan a QR code and the user's cell phone will prompt them to email a pre-set address.
+                        </li>
+                        <li class="card-text">
+                            <strong>SMS:</strong> user's cell phone will prompt them to SMS a pre-set phone number.
+                        </li>
+                        <li class="card-text">
+                            <strong>Map:</strong> user's cell phone will display a dropped pin on their maps application. Great for sharing locations.
+                        </li>
+                    </ul>
+                </div>
+              </div>
+
+        </div>
+    </div>
+
 </div>
 
 
