@@ -39,6 +39,25 @@ def result(code_size=None):
 
         req = request.form
         requested_url = req["url"]
+        code_type = req["radiogrp"] #get the type of code e.g. URL/phone/email etc
+        
+        #update code based on type of code asked for
+        if code_type == "email":
+            prepend = "mailto:"
+            requested_url = prepend + requested_url
+
+        if code_type == "phone":
+            prepend = "tel:"
+            requested_url = prepend + requested_url
+        
+        if code_type == "sms":
+            prepend = "sms:"
+            requested_url = prepend + requested_url
+        
+        if code_type == "geo":
+            prepend = "geo:"
+            requested_url = prepend + requested_url
+
         base_url = "https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl="   
         query_url = base_url + requested_url
         session['query_url'] = query_url #insert into session
@@ -70,7 +89,7 @@ def get_success():
         req = request.form
         email = req["email_address"]
         code = session.get('query_url', None)
-        msg = Message(subject="Here is your QuikQR QR code", sender='admin@benmurison.com', recipients=[email])
+        msg = Message(subject="Here is your QR Wolf QR code", sender='admin@benmurison.com', recipients=[email])
         msg.html = render_template('email.html', code_url = code)
         mail = Mail(app)
         mail.send(msg)

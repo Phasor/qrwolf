@@ -12,7 +12,58 @@
         <div class="col-6 my-col">
             <h1>Make a free QR code:</h1>
             <form action="/qr-code" method="POST">
-                <input class="form-control" type="text" name="url" placeholder="www.website.com" required>
+
+<!--    test  -->
+                
+                <input type="radio" value="website" id="website" name="radiogrp" checked="checked"  />
+                <label for="URL">URL</label>
+
+
+
+                <input type="radio" value="phone" id="Phone" name="radiogrp" />
+                <label for="Phone">Phone</label>
+
+                <input type="radio" value="email" id="Email" name="radiogrp" />
+                <label for="Email">Email</label>
+
+                <input type="radio" value="sms" id="sms" name="radiogrp" />
+                <label for="SMS">SMS</label>
+
+                <input type="radio" value="geo" id="geo" name="radiogrp" />
+                <label for="Map">Map</label>
+                
+                <script>
+                var url = document.getElementById("website");
+                var phone = document.getElementById("Phone");
+                var email = document.getElementById("Email");
+                var sms = document.getElementById("sms");
+                var geo = document.getElementById("geo");
+                
+                url.onclick = function() {
+                    document.getElementById("requestcode").placeholder = "www.website.com";
+                
+                }
+                
+                phone.onclick = function() {
+                    document.getElementById("requestcode").placeholder = "Full international number. No spaces";
+                }
+
+                email.onclick = function() {
+                    document.getElementById("requestcode").placeholder = "recipient@mail.com";
+                }
+
+                sms.onclick = function() {
+                    document.getElementById("requestcode").placeholder = "Full international number. No spaces";
+                }
+
+                geo.onclick = function() {
+                    document.getElementById("requestcode").placeholder = "Latt,Long no spaces e.g. 40.742081,-74.004480";
+                }
+
+                </script>
+
+<!--    test  -->
+                <input class="form-control" id="requestcode" type="text" name="url" placeholder="www.website.com" required>
 
                 <button type="submit" class="btn btn-primary my-btn">Create Code!</button>
 
