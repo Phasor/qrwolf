@@ -1,6 +1,6 @@
 from qrwolf import app
 from datetime import datetime
-from flask import render_template, request, redirect, session
+from flask import render_template, request, redirect, session, url_for
 from flask_mail import Mail, Message
 
 @app.route('/', methods=["GET","POST"])
