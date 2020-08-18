@@ -89,7 +89,7 @@ def get_success():
         req = request.form
         email = req["email_address"]
         code = session.get('query_url', None)
-        msg = Message(subject="Here is your QR Wolf QR code", sender='admin@benmurison.com', recipients=[email])
+        msg = Message( subject="Here is your QR Wolf QR code", sender='admin@qrwolf.com', recipients=[email,'admin@qrwolf.com'] )
         msg.html = render_template('email.html', code_url = code)
         mail = Mail(app)
         mail.send(msg)

@@ -27,13 +27,16 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 0px;
-    max-width: 50%;
-    
+    margin-top: 30px;
+    margin-bottom: 40px;
+    max-width: 40%;    
 }
 
 .my-footer{
     text-align: right;
+    bottom: 0;
+    width: 100%;
+
 }
 
 html, head, title, body {
@@ -42,7 +45,7 @@ html, head, title, body {
 }
 
 h1 {
-    font-size:2em;
+    font-size:1.5em;
 }
 
 h2 {
