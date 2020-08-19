@@ -1,6 +1,6 @@
 from qrwolf import app
 from datetime import datetime
-from flask import render_template, request, redirect, session, url_for
+from flask import render_template, request, redirect, session, url_for, Response, make_response
 from flask_mail import Mail, Message
 
 @app.route('/', methods=["GET","POST"])
@@ -98,5 +98,23 @@ def get_success():
 
     return render_template('generate.html', query_url = code, status_msg="Something went wrong.")
 
+@app.route('/sitemap.xml')
+def sitemap():
+    lastmod = datetime.now()
+    lastmod = lastmod.strftime('%Y-%m-%d')
+    
+    pages = [
+        ['http://www.qrwolf.com', lastmod],
+        ['http://www.qrwolf.com/how-to-use-qr-codes', lastmod],
+        ['http://www.qrwolf.com/about', lastmod],
+        ['http://www.qrwolf.com/contact',lastmod]
+    ]
 
+    sitemap_template = render_template('sitemap.xml', pages=pages)
+    response = make_response(sitemap_template)
+    response.headers['Content-Type'] = 'application/xml'
+    return response
+
+
+    
 
