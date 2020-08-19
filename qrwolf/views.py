@@ -104,10 +104,10 @@ def sitemap():
     lastmod = lastmod.strftime('%Y-%m-%d')
     
     pages = [
-        ['http://www.qrwolf.com', lastmod],
-        ['http://www.qrwolf.com/how-to-use-qr-codes', lastmod],
-        ['http://www.qrwolf.com/about', lastmod],
-        ['http://www.qrwolf.com/contact',lastmod]
+        ['https://www.qrwolf.com', lastmod],
+        ['https://www.qrwolf.com/how-to-use-qr-codes', lastmod],
+        ['https://www.qrwolf.com/about', lastmod],
+        ['https://www.qrwolf.com/contact',lastmod]
     ]
 
     sitemap_template = render_template('sitemap.xml', pages=pages)
