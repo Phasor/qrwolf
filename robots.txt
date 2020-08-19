@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /qr-code/
+Disallow: /success/
+Noindex: /qr-code/
+Noindex: /success/
+
