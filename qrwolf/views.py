@@ -1,6 +1,6 @@
 from qrwolf import app
 from datetime import datetime
-from flask import render_template, request, redirect, session, url_for, Response, make_response
+from flask import render_template, request, redirect, session, url_for, Response, make_response, send_from_directory
 from flask_mail import Mail, Message
 
 @app.route('/', methods=["GET","POST"])
@@ -115,6 +115,8 @@ def sitemap():
     response.headers['Content-Type'] = 'application/xml'
     return response
 
-
+@app.route('/robots.txt')
+def robots():
+    return send_from_directory('templates', request.path[1:])
     
 
