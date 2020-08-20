@@ -119,4 +119,6 @@ def sitemap():
 def robots():
     return send_from_directory('templates', request.path[1:])
     
-
+@app.route('/BingSiteAuth.xml')
+def bing():
+    return send_from_directory('templates', request.path[1:])
