@@ -16,12 +16,12 @@ def home():
         #query_url)
 
 
-    return render_template('index.html',title='QR Code Scanner: create a QR code now', 
-           description='Use our free QR code generator to drive traffic to your website, send SMS, emails and more.')
+    return render_template('index.html',title='Create QR Code for Free', 
+           description='Simple QR code app to turn a URL to QR code, send emails, SMS, call a phone number or share a map location. Try it now.')
 
 @app.route('/about')
 def about():
-    return render_template('about.html')
+    return render_template('about.html', title="About QR Wolf")
 
 @app.route('/contact')
 def contact():
@@ -29,7 +29,7 @@ def contact():
 
 @app.route('/how-to-use-qr-codes')
 def tutorial():
-    return render_template('tutorial.html', title="QR Code FAQ")
+    return render_template('tutorial.html', title='How QR Codes Work', description='How do I scan a QR Code? Answers to common questions to help you create QR codes.' )
 
 
 @app.route('/qr-code', methods=["GET","POST"])
